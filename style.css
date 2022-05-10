@@ -20,3 +20,49 @@ body {
     font-family: 'Radio Canada', sans-serif;
     text-decoration: none;
 }
+
+.nav-header {
+    min-height: 10vh;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    width: 80%;
+    margin: auto;
+    padding: 2rem 0rem;
+}
+
+.line1, .line2 {
+    width: 3rem;
+    height: 0.2rem;
+    margin: 0.4rem;
+    background: white;
+    pointer-events: none;
+}
+
+.slide {
+    min-height: 100vh;
+    margin: 0 auto 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background: #17181a
+}
+
+.hero-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    flex-basis: 25rem;
+    padding-left: 4rem;
+}
+
+img {
+    max-width: 50%;
+    max-height: auto;
+}
