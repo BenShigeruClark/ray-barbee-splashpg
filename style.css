@@ -60,6 +60,7 @@ body {
     flex: 1;
     flex-basis: 25rem;
     padding-left: 4rem;
+    position: relative;
 }
 
 img {
