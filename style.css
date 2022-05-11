@@ -98,6 +98,24 @@ body {
     font-size: 2.5rem;
 }
 
+.hero-desc p {
+    padding: 3rem 0rem;
+    font-size: 1.5rem;
+    color: rgb(223,223,223);
+}
+
+.explore {
+    padding: 1rem 2rem;
+    background: none;
+    border: none;
+    color: white;
+    border: 1px solid white;
+    font-size: 1rem;
+    text-decoration: none;
+    align-self: flex-start;
+    cursor: pointer;
+}
+
 img {
     max-width: auto;
     max-height: 50%;
