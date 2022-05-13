@@ -1,11 +1,30 @@
-const noComply = document.querySelector('.no-comply-exp');
+// const rayPhoto = document.querySelector('.photography-exp');
 
-window.addEventListener('scroll', scrollReveal);
+// window.addEventListener('scroll', scrollReveal);
 
-function scrollReveal() {
-    const nocomplyPos = noComply.getBoundingClientRect().top;
-    console.log(nocomplyPos);
-    if(nocomplyPos < 0) {
-        noComply.style.color = 'red';
-    }
+// function scrollReveal() {
+//     const cameraPos = rayPhoto.getBoundingClientRect().top;
+//     const windowHeight = window.innerHeight / 1.5;
+//     console.log(windowHeight);
+//     if(cameraPos < windowHeight) {
+//         rayPhoto.style.color = 'red';
+//     }
+// }
+
+const slide = document.querySelector('.camera');
+
+let options = {
+    threshold: 0.5
 }
+
+let observer = new IntersectionObserver(slideAnime, options)
+
+function slideAnime(entries) {
+    entries.forEach(entry => {
+        if(entry.isIntersecting) {
+            slide.style.background = 'white';
+        }
+    });
+}
+
+observer.observe(slide);
