@@ -182,3 +182,7 @@ img {
     border-radius: 50%;
     position: absolute;
 }
+
+.active {
+    color: rgb(76, 178, 251);
+}

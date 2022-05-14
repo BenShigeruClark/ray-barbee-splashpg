@@ -11,20 +11,31 @@
 //     }
 // }
 
-const slide = document.querySelector('.camera');
+// const slide = document.querySelector('.camera');
 
-let options = {
-    threshold: 0.5
-}
+// let options = {
+//     threshold: 0.5
+// }
 
-let observer = new IntersectionObserver(slideAnime, options)
+// let observer = new IntersectionObserver(slideAnime, options)
 
-function slideAnime(entries) {
-    entries.forEach(entry => {
-        if(entry.isIntersecting) {
-            slide.style.background = 'white';
-        }
-    });
-}
+// function slideAnime(entries) {
+//     entries.forEach(entry => {
+//         if(entry.isIntersecting) {
+//             slide.style.background = 'white';
+//         }
+//     });
+// }
 
-observer.observe(slide);
+// observer.observe(slide);
+
+const controller = new ScrollMagic.Controller();
+
+const exploreScene = new ScrollMagic.Scene({
+    triggerElement: '.photography-exp',
+    triggerHook: 0.5
+})
+    .addIndicators({colorStart: 'white', colorTrigger: 'white'})
+    .setClassToggle('.photography-exp', 'active')
+    .addTo(controller);
+
