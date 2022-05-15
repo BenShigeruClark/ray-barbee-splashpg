@@ -49,7 +49,7 @@ function animateSlides() {
             name: 'page',
             Indent: 200
         })
-        .setPin(slide)
+        .setPin(slide, { pushFollowers: false })
         .setTween(pageTl)
         .addTo(controller)
     });
