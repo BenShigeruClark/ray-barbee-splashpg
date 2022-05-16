@@ -170,10 +170,10 @@ img {
 .reveal-img, .reveal-text {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 150%;
     background: #201E1F;
     left: 0;
-    top: 0;
+    top: -15%;
 }
 
 .cursor {
@@ -182,8 +182,13 @@ img {
     border: 2px solid white;
     border-radius: 50%;
     position: absolute;
+    transform: translate(-50%, -50%);
 }
 
 .active {
     color: rgb(76, 178, 251);
+}
+
+.scrollmagic-pin-spacer {
+    position: static !important;
 }
