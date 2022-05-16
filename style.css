@@ -183,10 +183,30 @@ img {
     border-radius: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+    transition-property: background, transform;
+    transform-origin: 75% 75%;
 }
 
-.active {
-    color: rgb(76, 178, 251);
+.cursor.nav-active {
+    background: rgb(94, 196, 255);
+    transform: scale(3);
+    opacity: 50%;
+}
+
+.cursor.explore-active {
+    background: white;
+    transform: scale(3);
+    /* opacity: 90%; */
+}
+
+.cursor-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 1rem;
+    transform: translate(-50%, -50%);
 }
 
 .scrollmagic-pin-spacer {
