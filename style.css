@@ -6,6 +6,7 @@ font-family: 'Rubik', sans-serif; */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 body {
@@ -14,7 +15,7 @@ body {
     font-family: 'Koulen', cursive;
     color: #46494b;
     overflow-x: hidden;
-
+    position: relative;
 }
 
 #logo {
@@ -33,6 +34,8 @@ body {
     width: 80%;
     margin: auto;
     padding: 2rem 0rem;
+    z-index: 2;
+    position: relative;
 }
 
 .line1, .line2 {
@@ -61,8 +64,9 @@ body {
     align-items: center;
     flex: 1;
     flex-basis: 25rem;
-    padding-left: 4rem;
+    padding-left: 5rem;
     position: relative;
+    /* padding-bottom: 1rem; */
 }
 
 .hero-img {
@@ -77,6 +81,11 @@ body {
     height: 100%;
     object-fit: cover;
 }
+
+/* .rayStep {
+    width: 50%;
+    height: 10%;
+} */
 
 .comply-span {
     color: rgb(255, 139, 93);
@@ -96,7 +105,7 @@ body {
 
 .hero-desc h2 {
     font-family: 'Rubik', sans-serif;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .hero-desc p {
@@ -106,7 +115,7 @@ body {
 }
 
 .explore {
-    padding: 0.05rem 1rem;
+    padding: 0.5rem 1rem;
     background: none;
     border: none;
     color: white;
@@ -117,10 +126,10 @@ body {
     cursor: pointer;
 }
 
-img {
+/* img {
     max-width: auto;
-    max-height: 50%;
-}
+    max-height: 25%;
+} */
 
 .nav-bar {
     position: fixed;
@@ -207,6 +216,25 @@ img {
     left: 50%;
     font-size: 1rem;
     transform: translate(-50%, -50%);
+}
+
+.title {
+    position: relative;
+    overflow: hidden;
+}
+
+.title-swipe {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    mix-blend-mode: darken;
+    transform: translateY(100%);
+}
+
+.t-swipe1 {
+    background: rgb(255, 139, 93);
 }
 
 .scrollmagic-pin-spacer {
