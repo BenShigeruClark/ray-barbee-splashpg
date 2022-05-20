@@ -252,3 +252,7 @@ body {
 .scrollmagic-pin-spacer {
     position: static !important;
 }
+
+body.hide {
+    overflow: hidden;
+}
