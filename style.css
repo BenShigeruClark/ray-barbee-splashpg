@@ -237,6 +237,18 @@ body {
     background: rgb(255, 139, 93);
 }
 
+.t-swipe2 {
+    background: rgb(94, 196, 255);
+} 
+
+.t-swipe3 {
+    background: rgb(131, 199, 127);
+}
+
+.t-swipe4 {
+    background: rgb(198, 132, 220);
+}
+
 .scrollmagic-pin-spacer {
     position: static !important;
 }
