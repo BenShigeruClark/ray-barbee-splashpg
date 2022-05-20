@@ -2,6 +2,10 @@ let controller;
 let slideScene;
 let pageScene;
 
+gsap.config({
+    nullTargetWarn: false,
+});
+
 function animateSlides() {
     // Init controller
     controller = new ScrollMagic.Controller();
@@ -15,12 +19,12 @@ function animateSlides() {
         const revealText = slide.querySelector(".reveal-text");
         // GSAP
         const slideTl = gsap.timeline({
-            defaults: {duration: 1, ease: "power2.inOut"}
+            defaults: { duration: 1, ease: "power2.inOut" }
         });
         slideTl.fromTo(revealImg, {x: "0%"}, {x: "100%"});
         slideTl.fromTo(img, { scale: 2 }, { scale: 1 }, "-=1");
         slideTl.fromTo(revealText, {x: "0%"}, {x: "100%"}, "-=0.75");
-        slideTl.fromTo(nav, {y: "-100%"}, {y: "0%"}, "-=0.5");
+        // slideTl.fromTo(nav, {y: "-100%"}, {y: "0%"}, "-=0.5");
         // Create a scene
         slideScene = new ScrollMagic.Scene({
             triggerElement: slide,
@@ -58,8 +62,9 @@ function animateSlides() {
     });
 }
 
-let mouse = document.querySelector(".cursor");
-let mouseTxt = mouse.querySelector("span");
+const mouse = document.querySelector(".cursor");
+const mouseTxt = mouse.querySelector("span");
+const burger = document.querySelector(".burger");
 
 function cursor(e) {
     mouse.style.top = e.pageY + "px";
@@ -80,11 +85,29 @@ function activeCursor(e) {
         mouseTxt.innerText = "Tap";
     } else {
         mouse.classList.remove("explore-active");
-        mouseTxt.innerText = '';
+        mouseTxt.innerText = "";
         gsap.to(".title-swipe", 1, { y: "100%" });
     }
 }
 
+function navToggle(e) {
+    if(!e.target.classList.contains("active")) {
+        e.target.classList.add("active");
+        gsap.to(".line1", 0.5, { rotate: "45", y: 5, background: "black" });
+        gsap.to(".line2", 0.5, { rotate: "-45", y: -5, background: "black" });
+        gsap.to("#logo", 1, { color: "#46494b" });
+        gsap.to(".nav-bar", 1, { clipPath: "circle(2500px at 100% -10%)" });
+    } else {
+        e.target.classList.remove("active");
+        gsap.to(".line1", 0.5, { rotate: "0", y: 0, background: "white" });
+        gsap.to(".line2", 0.5, { rotate: "0", y: 0, background: "white" });
+        gsap.to("#logo", 1, { color: "white" });
+        gsap.to(".nav-bar", 1, { clipPath: "circle(50px at 100% -10)" });
+    }
+}
+
+//Event Listeners
+burger.addEventListener("click", navToggle);
 window.addEventListener("mousemove", cursor);
 window.addEventListener("mouseover", activeCursor);
 
