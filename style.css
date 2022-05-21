@@ -18,6 +18,10 @@ body {
     position: relative;
 }
 
+main {
+    position: absolute;
+}
+
 #logo {
     color: white;
     font-family: 'Radio Canada', sans-serif;
@@ -38,7 +42,8 @@ body {
     position: relative;
 }
 
-.line1, .line2 {
+.line1, 
+.line2 {
     width: 3rem;
     height: 0.2rem;
     margin: 0.4rem;
@@ -82,11 +87,6 @@ body {
     object-fit: cover;
 }
 
-/* .rayStep {
-    width: 50%;
-    height: 10%;
-} */
-
 .comply-span {
     color: rgb(255, 139, 93);
 }
@@ -105,7 +105,7 @@ body {
 
 .hero-desc h2 {
     font-family: 'Rubik', sans-serif;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .hero-desc p {
@@ -115,7 +115,7 @@ body {
 }
 
 .explore {
-    padding: 0.5rem 1rem;
+    padding: 1rem 2rem;
     background: none;
     border: none;
     color: white;
@@ -125,11 +125,6 @@ body {
     align-self: flex-start;
     cursor: pointer;
 }
-
-/* img {
-    max-width: auto;
-    max-height: 25%;
-} */
 
 .nav-bar {
     position: fixed;
@@ -153,7 +148,7 @@ body {
 
 .nav-links {
     font-size: 3rem;
-    flex-basis: 40rem;
+    flex-basis: 30rem;
 
 }
 
@@ -173,10 +168,11 @@ body {
 .contact p {
     font-size: 1.5rem;
     line-height: 2rem;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
-.reveal-img, .reveal-text {
+.reveal-img, 
+.reveal-text {
     position: absolute;
     width: 100%;
     height: 150%;
