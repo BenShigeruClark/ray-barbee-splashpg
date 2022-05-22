@@ -252,3 +252,52 @@ main {
 body.hide {
     overflow: hidden;
 }
+
+/* Other pages */
+.image1, .image2, .image3 {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+    color: white;
+    margin-top: 5rem;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.skate-img {
+    height: 70vh;
+    flex-basis: 30rem;
+}
+
+.image-text {
+    flex: 1;
+    position: relative;
+    flex-basis: 25rem;
+}
+
+.skate-img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.image-text h1{
+    font-size: 6rem;
+    padding: 5rem 0rem;
+    font-family: 'Rubik', sans-serif;
+}
+
+.image1 h1 {
+    color:rgb(94, 196, 255)
+}
+
+.image2 h1 {
+    color:rgb(131, 199, 127)
+}
+
+.image3 h1 {
+    color:rgb(198, 132, 220)
+}
