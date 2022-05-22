@@ -301,3 +301,20 @@ body.hide {
 .image3 h1 {
     color:rgb(198, 132, 220)
 }
+
+.image-text p {
+    font-size: 2rem;
+    padding: 2rem 2rem 0rem 0rem;
+    margin-bottom: 10rem;
+}
+
+.skate-nr {
+    font-size: 26rem;
+    padding: 2.5rem;
+    position: absolute;
+    left: 62%;
+    top: 1%;
+    bottom: 20%;
+    color:white;
+    opacity: 0.65;
+}
