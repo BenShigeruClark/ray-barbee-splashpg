@@ -110,12 +110,14 @@ function navToggle(e) {
 }
 
 // Barba page transitions
+const logo = document.querySelector("#logo")
 barba.init({
     views: [
         {
             namespace: 'home',
             beforeEnter(){
                 animateSlides();
+                logo.href = "./index.html";
             },
             beforeLeave(){
                 slideScene.destroy();
@@ -124,7 +126,10 @@ barba.init({
             }
         },
         {
-            namespace: 'second'
+            namespace: 'second',
+            beforeEnter(){
+                logo.href = "../index.html";
+            }
         }
     ],
     transitions: [
@@ -133,11 +138,13 @@ barba.init({
                 let done = this.async();
                 // Animation
                 const tl = gsap.timeline({ defaults: { ease: 'power2.inOut' } });
+                tl.fromTo(current.container, 1, { opacity: 1 }, { opacity: 0 });
                 tl.fromTo(
-                    current.container, 
-                    1, 
-                    { opacity: 1 }, 
-                    { opacity: 0, onComplete: done }
+                    ".swipe", 
+                    0.75, 
+                    { x: "-100%" }, 
+                    { x: "0%", onComplete: done }, 
+                    "-=0.5"
                 );
             },
             enter({current,next}){
@@ -147,10 +154,12 @@ barba.init({
                 // Animation
                 const tl = gsap.timeline({ defaults: { ease: 'power2.inOut' } });
                 tl.fromTo(
-                    next.container, 
-                    1, 
-                    { opacity: 0 }, 
-                    { opacity: 1, onComplete: done });
+                    ".swipe",
+                    1,
+                    { x: "0%" },
+                    { x: "100%", stagger: 0.25, onComplete: done }
+                );
+                tl.fromTo(next.container, 1, { opacity: 0 }, { opacity: 1 });
             }
         }
     ]
